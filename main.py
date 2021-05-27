@@ -8,11 +8,17 @@ def Menu_Principal():
     while(continuar):
         opcion_correcta = False
         while(not opcion_correcta):
-            print("-----MENU PRINCIPAL-----")  
+            print("\n __  __ ______ _   _ _    _ \t                ;'-. ")
+            print("|  \\/  |  ____| \\ | | |  | |\t    `;-._        )  '---.._")
+            print("| \\  / | |__  |  \\| | |  | |\t      >  `-.__.-'          `'.__")
+            print("| |\\/| |  __| | . ` | |  | |\t     /_.-'-._         _,   ^ ---)")
+            print("| |  | | |____| |\\  | |__| |\t     `       `'------/_.'----```")
+            print("|_|  |_|______|_| \\_|\\____/\t                     `\n")
+ 
             print("1. Tabla Categorias")  
             print("2. Tabla Productos")
-            print("3. Salir de la aplicacion\n")
-            opcion = int(input("Elija una opcion: "))
+            print("3. Salir de la aplicacion")
+            opcion = int(input("\nElija una opcion: "))
 
             if(opcion < 1 or opcion > 3):
                 print("\nOpcion incorrecta\n")
@@ -25,12 +31,17 @@ def Menu_Principal():
                 while(continuarC):
                     opcion_correctaC = False
                     while(not opcion_correctaC):
-                        print("-----CATEGORIAS-----")
+
+                        print("\n  ___   __  ____  ____  ___   __  ____  __   __   ____ ")
+                        print(" / __) / _\\(_  _)(  __)/ __) /  \\(  _ \\(  ) / _\\ / ___)")
+                        print("( (__ /    \\ )(   ) _)( (_ \\(  O ))   / )( /    \\\\___ \\")
+                        print(" \\___)\\_/\\_/(__) (____)\\___/ \\__/(__\\_)(__)\\_/\\_/(____/\n")
+
                         print("1. Listar categorias")
                         print("2. Registrar categorias")
                         print("3. Actualizar categorias")
                         print("4. Eliminar categorias")
-                        print("5. Salir\n")
+                        print("5. Regresar\n")
                         opcionC = int(input("Seleccione una opcion: "))
 
                         if(opcionC<1 or opcionC>5):
@@ -47,12 +58,16 @@ def Menu_Principal():
                 while(continuarP):
                     opcion_correctaP = False
                     while(not opcion_correctaP):
-                        print("-----PRODUCTOS-----")
+                        print("\n ____  ____   __  ____  _  _   ___  ____  __   ____ ")
+                        print("(  _ \\(  _ \\ /  \\(    \\/ )( \\ / __)(_  _)/  \\ / ___)")
+                        print(" ) __/ )   /(  O )) D () \\/ (( (__   )( (  O )\\___ \\")
+                        print("(__)  (__\\_) \\__/(____/\\____/ \\___) (__) \\__/ (____/\n")
+
                         print("1. Listar productos")
                         print("2. Registrar productos")
                         print("3. Actualizar productos")
                         print("4. Eliminar productos")
-                        print("5. Salir\n")
+                        print("5. Regresar\n")
                         opcionP = int(input("Seleccione una opcion: "))
 
                         if(opcionP<1 or opcionP>5):

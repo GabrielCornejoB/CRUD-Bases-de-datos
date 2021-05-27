@@ -1,17 +1,14 @@
 #METODOS DE CATEGORIAS
 def Mostrar_categorias(categorias):
     print("\nCategorias: \n")
-    #v_categorias = []
+    print("| ID | Categoria")
+    print("|----|-----------------------")
     for c in categorias:
         if c[0] < 10:
-            datos = "{} | {}"
-            #v_categorias.append("{} | {}".format(c[0], c[1]))
+            datos = "| {}  | {}"
         else:
-            datos = "{}| {}"
-            #v_categorias.append("{}| {}".format(c[0], c[1]))
+            datos = "| {}  | {}"
         print(datos.format(c[0], c[1]))
-    #return v_categorias    
-    print("\n")
 
 def Pedir_datos_registro():
     id_cat = int(input("Ingrese ID de la categoria: "))   
@@ -25,7 +22,7 @@ def Pedir_datos_registro():
 
 def Pedir_datos_actualizacion(categorias):
     Mostrar_categorias(categorias)
-    id_editar = int(input("Ingrese el ID de la categoria que desea actualizar: "))
+    id_editar = int(input("\nIngrese el ID de la categoria que desea actualizar: "))
     existe_codigo = False
     for c in categorias:
         if(int(c[0]) == id_editar):
@@ -43,7 +40,7 @@ def Pedir_datos_actualizacion(categorias):
 
 def Pedir_datos_eliminacion(categorias):
     Mostrar_categorias(categorias)
-    id_eliminar = int(input("Ingrese el ID de la categoria que desea eliminar: "))
+    id_eliminar = int(input("\nIngrese el ID de la categoria que desea eliminar: "))
     existe_codigo = False
     for c in categorias:
         if(int(c[0]) == id_eliminar):
@@ -56,32 +53,34 @@ def Pedir_datos_eliminacion(categorias):
 #METODOS DE PRODUCTOS
 def Mostrar_productos(productos):
     print("\nProductos: \n")
-    #v_productos = []
+    print("| ID | Precio | Producto")
+    print("|----|--------|---------------------------")
     for p in productos:
         if p[0] >= 10:
-            if(len(p[2]) == 4):
-                datos = "{}| ${}  | {}"
+            if(len(p[2]) == 3):
+                datos = "| {} | ${}   | {}"
+            elif(len(p[2]) == 4):
+                datos = "| {} | ${}  | {}"
             elif len(p[2]) == 5:
-                datos = "{}| ${} | {}"
+                datos = "| {} | ${} | {}"
             else:
-                datos = "{}| ${}| {}"
+                datos = "| {} | ${}| {}"
         else:
-            if(len(p[2]) == 4):
-                datos = "{} | ${}  | {}"
+            if(len(p[2]) == 3):
+                datos = "| {}  | ${}   | {}"
+            elif(len(p[2]) == 4):
+                datos = "| {}  | ${}  | {}"
             elif len(p[2]) == 5:
-                datos = "{} | ${} | {}"
+                datos = "| {}  | ${} | {}"
             else:
-                datos = "{} | ${}| {}"
-        #v_productos.append(datos.format(p[0], p[2], p[1]))
+                datos = "| {}  | ${}| {}"
         print(datos.format(p[0], p[2], p[1]))
-    print("\n")
-    #return v_productos
 
 def Pedir_datos_registroP(categorias):
-    id_p = int(input("Ingrese ID del producto: "))   
+    id_p = int(input("\nIngrese ID del producto: "))   
     desc_p = input("Ingrese nombre del producto: ")
     Mostrar_categorias(categorias)
-    id_c = int(input("Ingrese el ID de la categoria a la que pertenece el producto: "))
+    id_c = int(input("\nIngrese el ID de la categoria a la que pertenece el producto: "))
     precio = input("Ingrese el precio del producto: ")
 
     existe_codigo = False
@@ -97,7 +96,7 @@ def Pedir_datos_registroP(categorias):
 
 def Pedir_datos_actualizacionP(productos):
     Mostrar_productos(productos)
-    id_editar = int(input("Ingrese el ID del producto que desea actualizar: "))
+    id_editar = int(input("\nIngrese el ID del producto que desea actualizar: "))
     existe_codigo = False
     for p in productos:
         if(int(p[0]) == id_editar):
@@ -116,7 +115,7 @@ def Pedir_datos_actualizacionP(productos):
 
 def Pedir_datos_eliminacionP(productos):
     Mostrar_productos(productos)
-    id_eliminar = int(input("Ingrese el ID del producto que desea eliminar: "))
+    id_eliminar = int(input("\nIngrese el ID del producto que desea eliminar: "))
     existe_codigo = False
     for p in productos:
         if(int(p[0]) == id_eliminar):
